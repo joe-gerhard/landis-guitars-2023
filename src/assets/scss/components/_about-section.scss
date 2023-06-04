@@ -1,0 +1,27 @@
+.about-section {
+    background-color: var(--color-off-white);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .read-more-button {
+        border: 0;
+        background-color: transparent;
+        color: var(--color-primary);
+        font-size: 1.1rem;
+        align-self: flex-end;
+    }
+
+    .hidden {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+    }
+
+    .hidden.active {
+        max-height: 1000px;
+        overflow: auto;
+    }
+}

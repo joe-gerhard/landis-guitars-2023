@@ -1,0 +1,42 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    color: var(--color-white);
+    background-color: var(--color-primary-darkest);
+    padding: 1.5rem;
+    padding-bottom: 6.5rem;
+    font-size: 0.7rem;
+    line-height: 1.8em;
+
+    a {
+        color: var(--color-white);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    address {
+        font-style: normal;
+        flex-shrink: 0;
+    }
+
+    .socials {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    svg {
+        fill: var(--color-white);
+        max-width: 1.2rem;
+        max-height: 1.2rem;
+    }
+
+    .logo {
+        max-width: 60px;
+        max-height: 55px;
+    }
+}

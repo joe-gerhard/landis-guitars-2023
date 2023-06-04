@@ -1,0 +1,81 @@
+.testimonial-section {
+    background-color: var(--color-primary-light);
+    overflow: hidden;
+    padding-top: 1.5rem;
+
+    h2,
+    blockquote,
+    .name {
+        color: var(--color-white);
+    }
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    .testimonial {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .testimonial > :is(blockquote, figcaption) {
+        position: relative;
+        top: 2rem;
+        opacity: 0;
+        transition: top 1s, opacity 1s;
+    }
+
+    .testimonial.active > :is(blockquote, figcaption) {
+        top: 0;
+        opacity: 1;
+    }
+
+    .testimonial.active {
+    }
+
+    .testimonial:nth-of-type(1) {
+        background-color: var(--color-primary-light);
+    }
+    .testimonial:nth-of-type(2) {
+        background-color: var(--color-primary);
+    }
+    .testimonial:nth-of-type(3) {
+        background-color: var(--color-primary-dark);
+    }
+
+    .testimonial > blockquote {
+        font-size: 1.3rem;
+        position: relative;
+        margin: 5rem 0 1.5rem;
+        text-align: center;
+        font-style: italic;
+
+        &::before,
+        &::after {
+            font-size: 320px;
+            position: absolute;
+            color: hsl(var(--color-white-hsl) / 0.15);
+        }
+
+        &::before {
+            content: open-quote;
+            top: 5rem;
+            left: -20%;
+        }
+
+        &::after {
+            content: close-quote;
+            bottom: -5rem;
+            right: -10%;
+        }
+    }
+
+    .name {
+        align-self: center;
+        font-size: 1.1rem;
+        margin-bottom: 5rem;
+        font-style: italic;
+        color: hsl(var(--color-white-hsl) / 0.7);
+    }
+}

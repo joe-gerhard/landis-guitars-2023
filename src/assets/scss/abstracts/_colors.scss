@@ -1,0 +1,19 @@
+:root {
+    --color-primary-hsl: 203 66% 59%;
+    --color-primary-light-hsl: 203 66% 65%;
+    --color-primary-dark-hsl: 203 66% 39%;
+    --color-primary-darkest-hsl: 203 66% 29%;
+    --color-black-hsl: 0 0% 0%;
+    --color-white-hsl: 0 0% 100%;
+    --color-off-white-hsl: 0 0% 97%;
+    --color-gray-hsl: 203 10% 40%;
+
+    --color-primary: hsl(var(--color-primary-hsl));
+    --color-primary-light: hsl(var(--color-primary-light-hsl));
+    --color-primary-dark: hsl(var(--color-primary-dark-hsl));
+    --color-primary-darkest: hsl(var(--color-primary-darkest-hsl));
+    --color-black: hsl(var(--color-black-hsl));
+    --color-white: hsl(var(--color-white-hsl));
+    --color-off-white: hsl(var(--color-off-white-hsl));
+    --color-gray: hsl(var(--color-gray-hsl));
+}
