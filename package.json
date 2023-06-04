@@ -6,7 +6,8 @@
   "scripts": {
     "watch-sass": "sass src/assets/scss/style.scss:src/assets/css/style.css --watch",
     "watch-ts": "npx tsc --watch",
-    "watch": "conc --kill-others \"npm:watch-*\""
+    "watch": "conc --kill-others \"npm:watch-*\"",
+    "build": ""
   },
   "author": "",
   "license": "ISC",
