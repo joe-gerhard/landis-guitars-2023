@@ -46,11 +46,13 @@ body {
 }
 .about-section {
   background-color: var(--color-off-white);
-  display: flex;
-  flex-direction: column;
+}
+.about-section .container {
+  margin: 0 auto;
   padding: 1.5rem;
   max-width: 1000px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 .about-section .read-more-button {
   border: 0;
@@ -80,6 +82,11 @@ body {
   bottom: 0%;
   width: 100%;
 }
+@media (min-width: 1250px) {
+  .contact-buttons {
+    display: none;
+  }
+}
 .contact-buttons a {
   display: flex;
   justify-content: center;
@@ -104,6 +111,11 @@ body {
   padding-bottom: 6.5rem;
   font-size: 0.7rem;
   line-height: 1.8em;
+}
+@media (min-width: 1250px) {
+  .footer {
+    padding-bottom: 1.5rem;
+  }
 }
 .footer a {
   color: var(--color-white);
@@ -136,6 +148,11 @@ body {
   height: 100vh;
   position: relative;
 }
+@media (min-width: 1250px) {
+  .hero-image {
+    height: 600px;
+  }
+}
 .hero-image img {
   width: 100%;
   height: 100%;
@@ -148,6 +165,11 @@ body {
   fill: var(--color-white);
   max-width: 220px;
   aspect-ratio: 565/500;
+}
+@media (min-width: 1250px) {
+  .hero-image .logo {
+    max-width: 600px;
+  }
 }
 
 .menu-button {
@@ -383,17 +405,46 @@ body {
 .photo-gallery {
   position: relative;
 }
-.photo-gallery .image-wrapper {
+.photo-gallery .image-carousel {
   display: flex;
   overflow-x: scroll;
+  overflow-y: hidden;
   scroll-snap-type: both mandatory;
   overscroll-behavior-x: contain;
 }
+@media (min-width: 1250px) {
+  .photo-gallery .image-carousel {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+.photo-gallery .image-wrapper {
+  width: 100vw;
+  height: 100vw;
+  aspect-ratio: 1/1;
+  scroll-snap-align: center;
+}
+@media (min-width: 1250px) {
+  .photo-gallery .image-wrapper {
+    width: 31%;
+    height: auto;
+  }
+}
 .photo-gallery img {
   width: 100%;
-  aspect-ratio: 1/1;
+  height: 100%;
   object-fit: cover;
   scroll-snap-align: center;
+}
+@media (min-width: 1250px) {
+  .photo-gallery img {
+    flex-grow: 1;
+  }
 }
 .photo-gallery .captions {
   position: absolute;
@@ -408,6 +459,11 @@ body {
   font-size: 1.2rem;
   text-align: center;
   pointer-events: none;
+}
+@media (min-width: 1250px) {
+  .photo-gallery .captions {
+    display: none;
+  }
 }
 .photo-gallery .captions > div {
   transition: opacity 0.7s;
@@ -434,6 +490,11 @@ body {
   transform: translateX(-50%);
   z-index: 1;
 }
+@media (min-width: 1250px) {
+  .photo-gallery .indicators {
+    display: none;
+  }
+}
 .photo-gallery .indicators > div {
   width: 0.5rem;
   height: 0.5rem;
@@ -449,12 +510,35 @@ body {
 .testimonial-section {
   background-color: var(--color-primary-light);
   overflow: hidden;
+  position: relative;
   padding-top: 1.5rem;
+}
+@media (min-width: 1250px) {
+  .testimonial-section {
+    padding-top: 0;
+  }
 }
 .testimonial-section h2,
 .testimonial-section blockquote,
 .testimonial-section .name {
   color: var(--color-white);
+}
+@media (min-width: 1250px) {
+  .testimonial-section h2 {
+    position: absolute;
+    top: 1.5rem;
+    left: 50%;
+    translate: -50% 0;
+  }
+}
+.testimonial-section .container {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1250px) {
+  .testimonial-section .container {
+    flex-direction: row;
+  }
 }
 .testimonial-section h2 {
   margin-bottom: 0;
@@ -462,13 +546,22 @@ body {
 .testimonial-section .testimonial {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 1.5rem;
+  flex-grow: 1;
+}
+@media (min-width: 1250px) {
+  .testimonial-section .testimonial {
+    padding: 1.5rem 7rem;
+  }
 }
 .testimonial-section .testimonial > :is(blockquote, figcaption) {
   position: relative;
   top: 2rem;
   opacity: 0;
   transition: top 1s, opacity 1s;
+  max-width: 500px;
 }
 .testimonial-section .testimonial.active > :is(blockquote, figcaption) {
   top: 0;

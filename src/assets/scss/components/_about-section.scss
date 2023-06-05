@@ -1,10 +1,13 @@
 .about-section {
     background-color: var(--color-off-white);
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem;
-    max-width: 1000px;
-    margin: 0 auto;
+
+    .container {
+        margin: 0 auto;
+        padding: 1.5rem;
+        max-width: 1000px;
+        display: flex;
+        flex-direction: column;
+    }
 
     .read-more-button {
         border: 0;

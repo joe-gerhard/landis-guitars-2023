@@ -56,7 +56,7 @@ const photoGalleryCallback = (entries) => {
     });
 };
 let photoGalleryOptions = {
-    root: document.querySelector('.photo-gallery .image-wrapper'),
+    root: document.querySelector('.photo-gallery .image-carousel'),
     rootMargin: '0px',
     threshold: 0.5,
 };

@@ -9,6 +9,10 @@
     bottom: 0%;
     width: 100%;
 
+    @media (min-width: 1250px) {
+        display: none;
+    }
+
     a {
         display: flex;
         justify-content: center;

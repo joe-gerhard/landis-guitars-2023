@@ -76,7 +76,7 @@ const photoGalleryCallback: IntersectionObserverCallback = (
 };
 
 let photoGalleryOptions: IntersectionObserverInit = {
-    root: document.querySelector('.photo-gallery .image-wrapper'),
+    root: document.querySelector('.photo-gallery .image-carousel'),
     rootMargin: '0px',
     threshold: 0.5,
 };

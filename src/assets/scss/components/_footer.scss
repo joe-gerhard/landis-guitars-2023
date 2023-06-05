@@ -9,6 +9,10 @@
     font-size: 0.7rem;
     line-height: 1.8em;
 
+    @media (min-width: 1250px) {
+        padding-bottom: 1.5rem;
+    }
+
     a {
         color: var(--color-white);
         text-decoration: none;
