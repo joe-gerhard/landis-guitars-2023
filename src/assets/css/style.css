@@ -114,42 +114,47 @@ body {
 
 .footer {
   display: flex;
+  background-color: var(--color-primary-darkest);
+  flex-direction: column;
+  min-height: 100vh;
+}
+.footer .top-container {
+  display: flex;
   justify-content: space-between;
   gap: 1.5rem;
   color: var(--color-white);
-  background-color: var(--color-primary-darkest);
-  padding: 1.5rem;
+  padding: 5rem 1.5rem 1.5rem 1.5rem;
   padding-bottom: 6.5rem;
   font-size: 0.7rem;
   line-height: 1.8em;
 }
 @media (min-width: 1000px) {
-  .footer {
+  .footer .top-container {
     padding-bottom: 1.5rem;
   }
 }
-.footer a {
+.footer .top-container a {
   color: var(--color-white);
   text-decoration: none;
 }
-.footer a:hover {
+.footer .top-container a:hover {
   text-decoration: underline;
 }
-.footer address {
+.footer .top-container address {
   font-style: normal;
   flex-shrink: 0;
 }
-.footer .socials {
+.footer .top-container .socials {
   display: flex;
   gap: 0.5rem;
   margin-top: 0.5rem;
 }
-.footer svg {
+.footer .top-container svg {
   fill: var(--color-white);
   max-width: 1.2rem;
   max-height: 1.2rem;
 }
-.footer .logo {
+.footer .top-container .logo {
   max-width: 60px;
   max-height: 55px;
 }
