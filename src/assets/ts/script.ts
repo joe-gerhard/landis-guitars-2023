@@ -54,21 +54,15 @@ const photoGalleryCallback: IntersectionObserverCallback = (
                 document.querySelectorAll<HTMLElement>('.photo-gallery img')
             );
 
-            const captions: HTMLElement[] = Array.from(
-                document.querySelectorAll<HTMLElement>('.captions div')
-            );
-
             const indicators: HTMLElement[] = Array.from(
                 document.querySelectorAll<HTMLElement>('.indicators div')
             );
 
             for (let i = 0; i < images.length; i++) {
                 indicators[i].classList.remove('active');
-                captions[i].classList.remove('active');
 
                 if (target === images[i]) {
                     indicators[i].classList.add('active');
-                    captions[i].classList.add('active');
                 }
             }
         }

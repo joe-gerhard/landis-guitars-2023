@@ -4,7 +4,7 @@
     position: relative;
     padding-top: 1.5rem;
 
-    @media (min-width: 1250px) {
+    @media (min-width: 1000px) {
         & {
             padding-top: 0;
         }
@@ -16,7 +16,7 @@
         color: var(--color-white);
     }
 
-    @media (min-width: 1250px) {
+    @media (min-width: 1000px) {
         h2 {
             position: absolute;
             top: 1.5rem;
@@ -30,7 +30,7 @@
         flex-direction: column;
     }
 
-    @media (min-width: 1250px) {
+    @media (min-width: 1000px) {
         .container {
             flex-direction: row;
         }
@@ -48,7 +48,7 @@
         padding: 1.5rem;
         flex-grow: 1;
 
-        @media (min-width: 1250px) {
+        @media (min-width: 1000px) {
             padding: 1.5rem 7rem;
         }
     }

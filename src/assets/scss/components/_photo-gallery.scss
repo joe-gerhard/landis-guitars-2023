@@ -8,7 +8,7 @@
         scroll-snap-type: both mandatory;
         overscroll-behavior-x: contain;
 
-        @media (min-width: 1250px) {
+        @media (min-width: 1000px) {
             width: 100%;
             max-width: 1000px;
             margin: 0 auto;
@@ -21,10 +21,10 @@
 
     .image-wrapper {
         width: 100vw;
-        height: 100vw;
-        aspect-ratio: 1 / 1;
+        height: calc(100vh - 5rem);
+        aspect-ratio: 1 / 1.5;
         scroll-snap-align: center;
-        @media (min-width: 1250px) {
+        @media (min-width: 1000px) {
             width: 31%;
             height: auto;
         }
@@ -36,7 +36,7 @@
         object-fit: cover;
         scroll-snap-align: center;
 
-        @media (min-width: 1250px) {
+        @media (min-width: 1000px) {
             flex-grow: 1;
         }
     }
@@ -55,7 +55,7 @@
         text-align: center;
         pointer-events: none;
 
-        @media (min-width: 1250px) {
+        @media (min-width: 1000px) {
             display: none;
         }
     }
@@ -87,7 +87,7 @@
         transform: translateX(-50%);
         z-index: 1;
 
-        @media (min-width: 1250px) {
+        @media (min-width: 1000px) {
             display: none;
         }
     }

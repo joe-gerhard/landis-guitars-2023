@@ -42,14 +42,11 @@ const photoGalleryCallback = (entries) => {
     entries.forEach(({ isIntersecting, target }) => {
         if (isIntersecting) {
             const images = Array.from(document.querySelectorAll('.photo-gallery img'));
-            const captions = Array.from(document.querySelectorAll('.captions div'));
             const indicators = Array.from(document.querySelectorAll('.indicators div'));
             for (let i = 0; i < images.length; i++) {
                 indicators[i].classList.remove('active');
-                captions[i].classList.remove('active');
                 if (target === images[i]) {
                     indicators[i].classList.add('active');
-                    captions[i].classList.add('active');
                 }
             }
         }
