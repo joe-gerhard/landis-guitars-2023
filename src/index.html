@@ -26,10 +26,12 @@
                     d="M21.5832 5.94375C21.7508 5.79844 22 5.93437 22 6.16406V15.75C22 16.9922 21.0762 18 19.9375 18H2.0625C0.923828 18 0 16.9922 0 15.75V6.16875C0 5.93438 0.244922 5.80312 0.416797 5.94844C1.3793 6.76406 2.65547 7.8 7.03828 11.2734C7.94492 11.9953 9.47461 13.5141 11 13.5047C12.534 13.5188 14.0937 11.9672 14.966 11.2734C19.3488 7.8 20.6207 6.75938 21.5832 5.94375ZM11 12C11.9969 12.0188 13.432 10.6313 14.1539 10.0594C19.8559 5.54531 20.2898 5.15156 21.6047 4.02656C21.8539 3.81562 22 3.4875 22 3.14062V2.25C22 1.00781 21.0762 0 19.9375 0H2.0625C0.923828 0 0 1.00781 0 2.25V3.14062C0 3.4875 0.146094 3.81094 0.395312 4.02656C1.71016 5.14687 2.14414 5.54531 7.84609 10.0594C8.56797 10.6313 10.0031 12.0188 11 12Z"
                 />
             </symbol>
-            <symbol id="instagram" viewBox="32 32 192 192">
+            <!-- <symbol id="instagram" viewBox="32 32 192 192">
                 <path
                     d="M160,128a32,32,0,1,1-32-32A32.03667,32.03667,0,0,1,160,128Zm68-44v88a56.06353,56.06353,0,0,1-56,56H84a56.06353,56.06353,0,0,1-56-56V84A56.06353,56.06353,0,0,1,84,28h88A56.06353,56.06353,0,0,1,228,84Zm-52,44a48,48,0,1,0-48,48A48.05436,48.05436,0,0,0,176,128Zm16-52a12,12,0,1,0-12,12A12,12,0,0,0,192,76Z"
                 />
+            </symbol> -->
+            <symbol id="instagram" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
             </symbol>
             <symbol id="arrow-1" viewBox="0 0 100 125">
                 <path
@@ -122,6 +124,16 @@
             <a href="mailto:sam.l.gerhard@gmail.com" target="_blank">
                 <svg><use href="#email" /></svg>
             </a>
+
+            <div class="arrow call-me-arrow">
+                <span>call</span> <svg><use href="arrow-1" /></svg>
+            </div>
+            <div class="arrow text-me-arrow">
+                <span>text</span> <svg><use href="arrow-1" /></svg>
+            </div>
+            <div class="arrow email-me-arrow">
+                <span>email</span> <svg><use href="arrow-1" /></svg>
+            </div>
         </div>
 
         <main>
@@ -258,26 +270,21 @@
         </main>
 
         <footer id="contact" class="footer">
-            <div class="top-container">
-                <address>
-                    (Something Cool Studios)<br />
-                    1717 E Cesar Chaves St<br />
-                    Austin, TX 78702
-                </address>
-                <svg class="logo"><use href="#landis-guitars" /></svg>
-                <div class="d-flex flex-direction-column align-items-end">
-                    <a href="tel:+1(480)323-9259">(480) 323-9259</a>
+            <svg class="logo"><use href="#landis-guitars" /></svg>
+                <div class="text-container">
+                    <address>
+                        <a href="tel:+1(480)323-9259">(480) 323-9259</a><br />
+                        <a href="mailto:sam@landisguitars.com"></a>Sam&#64LandisGuitars.com<br />
+                        1717 E Cesar Chaves St<br />
+                        Austin, TX 78702<br />
+                        (Something Cool Studios)
+                    </address>
                     <div class="socials">
                         <a href="#">
                             <svg><use href="#instagram" /></svg>
                         </a>
-                        <a href="#">
-                            <svg><use href="#email" /></svg>
-                        </a>
                     </div>
                 </div>
-            </div>
-            <!-- <svg><use href="#arrow-1" /></svg> -->
         </footer>
     </body>
 </html>

@@ -27,4 +27,62 @@
         fill: var(--color-white);
         max-width: 2rem;
     }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arrow {
+        opacity: 0;
+        font-family: 'Gochi Hand';
+        font-size: 3rem;
+        color: white;
+        transition: opacity 0.4s, left 0.4s, bottom 0.4s, right 0.4s;
+
+        svg {
+            // border: 1px solid red;
+            height: 6rem;
+        }
+    }
+
+    .arrow.active {
+        opacity: 1;
+    }
+
+    .call-me-arrow {
+        position: absolute;
+        left: -4rem;
+        bottom: 4rem;
+        margin-top: 5rem;
+    }
+
+    .call-me-arrow.active {
+        left: 1.5rem;
+        bottom: 0rem;
+    }
+
+    .text-me-arrow {
+        position: absolute;
+        bottom: 40vh;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .text-me-arrow.active {
+        bottom: 4rem;
+    }
+
+    .email-me-arrow {
+        position: absolute;
+        right: -4rem;
+        bottom: 4rem;
+        margin-top: 5rem;
+    }
+
+    .email-me-arrow.active {
+        right: 1.5rem;
+        bottom: 0rem;
+    }
 }

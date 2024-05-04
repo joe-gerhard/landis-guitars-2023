@@ -45,6 +45,16 @@ body {
   font-weight: bold;
 }
 @font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto/Roboto-Thin.ttf) format("truetype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto/Roboto-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+@font-face {
   font-family: "Montserrat";
   src: url(../fonts/Montserrat/static/Montserrat-Regular.ttf) format("truetype");
   font-style: normal;
@@ -53,6 +63,11 @@ body {
   font-family: "Montserrat";
   src: url(../fonts/Montserrat/static/Montserrat-Bold.ttf) format("truetype");
   font-weight: bold;
+}
+@font-face {
+  font-family: "Gochi Hand";
+  src: url(../fonts/Gochi_Hand/GochiHand-Regular.ttf) format("truetype");
+  font-style: normal;
 }
 .about-section {
   padding: 2.5rem 0;
@@ -111,52 +126,107 @@ body {
   fill: var(--color-white);
   max-width: 2rem;
 }
+.contact-buttons div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-buttons .arrow {
+  opacity: 0;
+  font-family: "Gochi Hand";
+  font-size: 3rem;
+  color: white;
+  transition: opacity 0.4s, left 0.4s, bottom 0.4s, right 0.4s;
+}
+.contact-buttons .arrow svg {
+  height: 6rem;
+}
+.contact-buttons .arrow.active {
+  opacity: 1;
+}
+.contact-buttons .call-me-arrow {
+  position: absolute;
+  left: -4rem;
+  bottom: 4rem;
+  margin-top: 5rem;
+}
+.contact-buttons .call-me-arrow.active {
+  left: 1.5rem;
+  bottom: 0rem;
+}
+.contact-buttons .text-me-arrow {
+  position: absolute;
+  bottom: 40vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.contact-buttons .text-me-arrow.active {
+  bottom: 4rem;
+}
+.contact-buttons .email-me-arrow {
+  position: absolute;
+  right: -4rem;
+  bottom: 4rem;
+  margin-top: 5rem;
+}
+.contact-buttons .email-me-arrow.active {
+  right: 1.5rem;
+  bottom: 0rem;
+}
 
 .footer {
-  display: flex;
   background-color: var(--color-primary-darkest);
-  flex-direction: column;
   min-height: 100vh;
-}
-.footer .top-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
   color: var(--color-white);
-  padding: 5rem 1.5rem 1.5rem 1.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
   padding-bottom: 6.5rem;
   font-size: 0.7rem;
   line-height: 1.8em;
 }
 @media (min-width: 1000px) {
-  .footer .top-container {
+  .footer {
     padding-bottom: 1.5rem;
   }
 }
-.footer .top-container a {
+.footer .logo {
+  fill: var(--color-white);
+  max-width: 120px;
+  aspect-ratio: 565/500;
+}
+.footer .text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .text-container a {
   color: var(--color-white);
   text-decoration: none;
 }
-.footer .top-container a:hover {
+.footer .text-container a:hover {
   text-decoration: underline;
 }
-.footer .top-container address {
+.footer .text-container address {
   font-style: normal;
   flex-shrink: 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8em;
+  letter-spacing: 0.08em;
 }
-.footer .top-container .socials {
+.footer .text-container .socials {
   display: flex;
   gap: 0.5rem;
   margin-top: 0.5rem;
 }
-.footer .top-container svg {
+.footer .text-container .socials svg {
   fill: var(--color-white);
-  max-width: 1.2rem;
-  max-height: 1.2rem;
-}
-.footer .top-container .logo {
-  max-width: 60px;
-  max-height: 55px;
+  max-width: 2.5rem;
+  max-height: 2.5rem;
 }
 
 .hero-image {
@@ -447,7 +517,7 @@ body {
 }
 .photo-gallery .image-wrapper {
   width: 100vw;
-  height: calc(100vh - 5rem);
+  height: calc(100vh - 8rem);
   aspect-ratio: 1/1.5;
   scroll-snap-align: center;
 }
@@ -672,6 +742,10 @@ span.bold {
 
 .align-items-end {
   align-items: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
