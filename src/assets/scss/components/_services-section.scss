@@ -1,4 +1,9 @@
 .services-section {
     min-height: 100vh;
     padding: 5rem 1.5rem 1.5rem 1.5rem;
+    background-color: var(--color-off-white);
+
+    ul {
+        padding-left: 1.5rem;
+    }
 }

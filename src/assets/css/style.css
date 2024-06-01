@@ -88,6 +88,7 @@ body {
   justify-content: center;
   z-index: 100;
   padding: 0.5rem;
+  padding-bottom: 1.5rem;
   position: fixed;
   bottom: 0%;
   width: 100%;
@@ -112,18 +113,48 @@ body {
   max-width: 2rem;
 }
 
+.contact-section {
+  padding: 5rem 1.5rem 1.5rem;
+  height: calc(100vh - (8rem + 65px));
+  background-color: var(--color-off-white);
+}
+.contact-section .contact-row {
+  margin: 0 auto;
+  width: max-content;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.contact-section .contact-row a {
+  color: var(--color-primary);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.contact-section .contact-row a svg {
+  max-width: 1.5em;
+  max-height: 1.5em;
+  fill: var(--color-primary);
+}
+.contact-section .contact-row a:hover {
+  color: var(--color-primary-dark);
+}
+
 .footer {
   display: flex;
   background-color: var(--color-primary-darkest);
   flex-direction: column;
-  min-height: 100vh;
 }
 .footer .top-container {
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
   color: var(--color-white);
-  padding: 5rem 1.5rem 1.5rem 1.5rem;
+  padding: 1.5rem;
   padding-bottom: 6.5rem;
   font-size: 0.7rem;
   line-height: 1.8em;
@@ -155,8 +186,8 @@ body {
   max-height: 1.2rem;
 }
 .footer .top-container .logo {
-  max-width: 60px;
-  max-height: 55px;
+  max-width: 65px;
+  max-height: 65px;
 }
 
 .hero-image {
@@ -447,7 +478,7 @@ body {
 }
 .photo-gallery .image-wrapper {
   width: 100vw;
-  height: calc(100vh - 5rem);
+  height: 100vh;
   aspect-ratio: 1/1.5;
   scroll-snap-align: center;
 }
@@ -458,7 +489,7 @@ body {
   }
 }
 .photo-gallery img {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   object-fit: cover;
   scroll-snap-align: center;
@@ -466,6 +497,7 @@ body {
 @media (min-width: 1000px) {
   .photo-gallery img {
     flex-grow: 1;
+    width: 100%;
   }
 }
 .photo-gallery .captions {
@@ -507,7 +539,7 @@ body {
   height: 1rem;
   width: 100%;
   gap: 0.5rem;
-  bottom: 1rem;
+  bottom: 0.5rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -532,6 +564,10 @@ body {
 .services-section {
   min-height: 100vh;
   padding: 5rem 1.5rem 1.5rem 1.5rem;
+  background-color: var(--color-off-white);
+}
+.services-section ul {
+  padding-left: 1.5rem;
 }
 
 .testimonial-section {
@@ -644,6 +680,7 @@ h2 {
 }
 
 p,
+ul,
 blockquote {
   color: var(--color-gray);
   margin-bottom: 1rem;
