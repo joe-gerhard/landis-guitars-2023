@@ -60,7 +60,10 @@ body {
 }
 @media (min-width: 1000px) {
   .about-section {
-    padding: 5rem 1.5rem;
+    padding: 9rem 1.5rem;
+  }
+  .about-section p {
+    font-size: 1.3rem;
   }
 }
 .about-section .read-more-button {
@@ -74,6 +77,11 @@ body {
 .about-section .read-more-button:hover {
   cursor: pointer;
   color: var(--color-primary-dark);
+}
+@media (min-width: 1000px) {
+  .about-section .read-more-button {
+    font-size: 1.3rem;
+  }
 }
 .about-section .hidden {
   max-height: 0;
@@ -123,6 +131,10 @@ body {
 @media (min-width: 1000px) {
   .contact-section {
     height: auto;
+    padding: 9rem 1.5rem;
+  }
+  .contact-section p {
+    font-size: 1.3rem;
   }
 }
 .contact-section .container {
@@ -154,6 +166,11 @@ body {
   font-size: 1rem;
   text-decoration: none;
   transition: 0.3s;
+}
+@media (min-width: 1000px) {
+  .contact-section .contact-row a {
+    font-size: 1.3rem;
+  }
 }
 .contact-section .contact-row a svg {
   max-width: 1.5em;
@@ -497,8 +514,8 @@ body {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    gap: 1.5rem;
-    padding: 5rem 0;
+    gap: 0.5rem;
+    padding: 2.5rem 0;
     justify-content: center;
     flex-wrap: wrap;
   }
@@ -514,6 +531,7 @@ body {
   .photo-gallery .image-wrapper {
     width: 31%;
     height: auto;
+    aspect-ratio: unset;
   }
 }
 .photo-gallery img {
@@ -593,8 +611,18 @@ body {
   padding: 5rem 1.5rem;
   background-color: var(--color-off-white);
 }
+@media (min-width: 1000px) {
+  .services-section {
+    padding: 9rem 1.5rem;
+  }
+}
 .services-section p {
   margin-bottom: 3rem;
+}
+@media (min-width: 1000px) {
+  .services-section p {
+    font-size: 1.3rem;
+  }
 }
 .services-section ul {
   font-weight: 400;

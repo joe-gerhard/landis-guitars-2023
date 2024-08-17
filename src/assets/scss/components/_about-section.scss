@@ -3,7 +3,11 @@
     background-color: var(--color-off-white);
 
     @media (min-width: 1000px) {
-        padding: 5rem 1.5rem;
+        padding: 9rem 1.5rem;
+
+        p {
+            font-size: 1.3rem;
+        }
     }
 
     .read-more-button {
@@ -17,6 +21,10 @@
         &:hover {
             cursor: pointer;
             color: var(--color-primary-dark);
+        }
+
+        @media (min-width: 1000px) {
+            font-size: 1.3rem;
         }
     }
 
