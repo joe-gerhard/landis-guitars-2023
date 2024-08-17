@@ -118,7 +118,6 @@ body {
 
 .contact-section {
   padding: 5rem 1.5rem;
-  height: calc(100vh - (8rem + 65px));
   background-color: var(--color-off-white);
 }
 @media (min-width: 1000px) {
@@ -249,6 +248,12 @@ body {
   .hero-image .logo {
     max-width: 600px;
   }
+}
+
+main {
+  scroll-snap-type: y;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .menu-button {
@@ -484,6 +489,7 @@ body {
 .photo-gallery {
   position: relative;
   background-color: var(--color-primary);
+  scroll-snap-align: center;
 }
 .photo-gallery .image-carousel {
   display: flex;
