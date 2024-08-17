@@ -55,15 +55,13 @@ body {
   font-weight: bold;
 }
 .about-section {
-  padding: 2.5rem 0;
+  padding: 5rem 1.5rem;
   background-color: var(--color-off-white);
 }
-.about-section .container {
-  margin: 0 auto;
-  padding: 1.5rem;
-  max-width: 1000px;
-  display: flex;
-  flex-direction: column;
+@media (min-width: 1000px) {
+  .about-section {
+    padding: 5rem 1.5rem;
+  }
 }
 .about-section .read-more-button {
   border: 0;
@@ -71,6 +69,11 @@ body {
   color: var(--color-primary);
   font-size: 1.1rem;
   align-self: flex-end;
+  transition: color 0.3s;
+}
+.about-section .read-more-button:hover {
+  cursor: pointer;
+  color: var(--color-primary-dark);
 }
 .about-section .hidden {
   max-height: 0;
@@ -114,34 +117,53 @@ body {
 }
 
 .contact-section {
-  padding: 5rem 1.5rem 1.5rem;
+  padding: 5rem 1.5rem;
   height: calc(100vh - (8rem + 65px));
   background-color: var(--color-off-white);
 }
+@media (min-width: 1000px) {
+  .contact-section {
+    height: auto;
+  }
+}
+.contact-section .container {
+  max-width: 500px;
+}
 .contact-section .contact-row {
   margin: 0 auto;
+  margin-top: 3rem;
   width: max-content;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   gap: 0.5rem;
 }
+@media (min-width: 1000px) {
+  .contact-section .contact-row {
+    margin-top: 1.5rem;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
 .contact-section .contact-row a {
   color: var(--color-primary);
+  fill: var(--color-primary);
   font-size: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   font-size: 1rem;
   text-decoration: none;
+  transition: 0.3s;
 }
 .contact-section .contact-row a svg {
   max-width: 1.5em;
   max-height: 1.5em;
-  fill: var(--color-primary);
+  fill: inherit;
 }
 .contact-section .contact-row a:hover {
   color: var(--color-primary-dark);
+  fill: var(--color-primary-dark);
 }
 
 .footer {
@@ -197,13 +219,18 @@ body {
 }
 @media (min-width: 1000px) {
   .hero-image {
-    height: 600px;
+    height: 100vh;
   }
 }
 .hero-image .gradient {
   position: absolute;
   inset: 0;
   background: linear-gradient(black, transparent 30%);
+}
+@media (min-width: 1000px) {
+  .hero-image .gradient {
+    background: linear-gradient(black, transparent 10%);
+  }
 }
 .hero-image img {
   width: 100%;
@@ -212,9 +239,8 @@ body {
 }
 .hero-image .logo {
   position: absolute;
-  top: 0.5rem;
-  left: 50%;
-  transform: translate(-50%, 0);
+  top: 2.5rem;
+  left: 2.5rem;
   fill: var(--color-white);
   max-width: 120px;
   aspect-ratio: 565/500;
@@ -457,6 +483,7 @@ body {
 
 .photo-gallery {
   position: relative;
+  background-color: var(--color-primary);
 }
 .photo-gallery .image-carousel {
   display: flex;
@@ -471,12 +498,13 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     gap: 1.5rem;
-    padding: 1.5rem 0;
+    padding: 5rem 0;
     justify-content: center;
     flex-wrap: wrap;
   }
 }
 .photo-gallery .image-wrapper {
+  position: relative;
   width: 100vw;
   height: 100vh;
   aspect-ratio: 1/1.5;
@@ -562,12 +590,43 @@ body {
 }
 
 .services-section {
-  min-height: 100vh;
-  padding: 5rem 1.5rem 1.5rem 1.5rem;
+  padding: 5rem 1.5rem;
   background-color: var(--color-off-white);
 }
+.services-section p {
+  margin-bottom: 3rem;
+}
 .services-section ul {
-  padding-left: 1.5rem;
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-bottom: 0;
+  list-style: none;
+  line-height: 1em;
+}
+.services-section li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1em;
+}
+.services-section li svg {
+  max-width: 1.2em;
+  max-height: 1.2em;
+  fill: var(--color-primary);
+}
+.services-section li span {
+  margin-top: 0.15em;
+}
+.services-section .bullet-points {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 1000px) {
+  .services-section .bullet-points {
+    flex-direction: row;
+    gap: 5rem;
+  }
 }
 
 .testimonial-section {
@@ -597,6 +656,7 @@ body {
 .testimonial-section .container {
   display: flex;
   flex-direction: column;
+  max-width: unset;
 }
 @media (min-width: 1000px) {
   .testimonial-section .container {
@@ -615,6 +675,11 @@ body {
   flex-grow: 1;
 }
 @media (min-width: 1000px) {
+  .testimonial-section .testimonial {
+    padding: 1.5rem 3rem;
+  }
+}
+@media (min-width: 1400px) {
   .testimonial-section .testimonial {
     padding: 1.5rem 7rem;
   }
@@ -673,7 +738,7 @@ h2 {
   font-family: "Montserrat";
   color: var(--color-primary);
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-size: 3rem;
   font-weight: bold;
   letter-spacing: 0.055em;
@@ -703,12 +768,23 @@ span.bold {
   flex-direction: column;
 }
 
+.justify-content-center {
+  justify-content: center;
+}
+
 .justify-content-end {
   justify-content: flex-end;
 }
 
 .align-items-end {
   align-items: flex-end;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */

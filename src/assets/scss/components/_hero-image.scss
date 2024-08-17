@@ -4,13 +4,17 @@
     position: relative;
 
     @media (min-width: 1000px) {
-        height: 600px;
+        height: 100vh;
     }
 
     .gradient {
         position: absolute;
         inset: 0;
         background: linear-gradient(black, transparent 30%);
+
+        @media (min-width: 1000px) {
+            background: linear-gradient(black, transparent 10%);
+        }
     }
 
     img {
@@ -21,9 +25,8 @@
 
     .logo {
         position: absolute;
-        top: 0.5rem;
-        left: 50%;
-        transform: translate(-50%, 0);
+        top: 2.5rem;
+        left: 2.5rem;
         fill: var(--color-white);
         max-width: 120px;
         aspect-ratio: 565 / 500;

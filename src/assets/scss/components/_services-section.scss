@@ -1,9 +1,45 @@
 .services-section {
-    min-height: 100vh;
-    padding: 5rem 1.5rem 1.5rem 1.5rem;
+    padding: 5rem 1.5rem;
     background-color: var(--color-off-white);
 
+    p {
+        margin-bottom: 3rem;
+    }
+
     ul {
-        padding-left: 1.5rem;
+        font-weight: 400;
+        font-size: 1.3rem;
+        margin-bottom: 0;
+        list-style: none;
+        line-height: 1em;
+    }
+
+    li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 1em;
+
+        svg {
+            max-width: 1.2em;
+            max-height: 1.2em;
+            fill: var(--color-primary);
+        }
+
+        span {
+            margin-top: 0.15em;
+            // color: var(--color-primary);
+        }
+    }
+
+    .bullet-points {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (min-width: 1000px) {
+            flex-direction: row;
+            gap: 5rem;
+        }
     }
 }

@@ -1,37 +1,52 @@
 .contact-section {
-    padding: 5rem 1.5rem 1.5rem;
+    padding: 5rem 1.5rem;
     height: calc(100vh - (8rem + 65px));
     background-color: var(--color-off-white);
 
-    // p {
-    //     line-height: 1.4em;
-    // }
+    @media (min-width: 1000px) {
+        height: auto;
+    }
+
+    .container {
+        max-width: 500px;
+    }
+
     .contact-row {
         margin: 0 auto;
+        margin-top: 3rem;
         width: max-content;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
         gap: 0.5rem;
 
+        @media (min-width: 1000px) {
+            margin-top: 1.5rem;
+            flex-direction: row;
+            gap: 1.5rem;
+        }
+
         a {
             color: var(--color-primary);
+            fill: var(--color-primary);
             font-size: 1rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
             font-size: 1rem;
             text-decoration: none;
+            transition: 0.3s;
 
             svg {
                 max-width: 1.5em;
                 max-height: 1.5em;
-                fill: var(--color-primary);
+                fill: inherit;
             }
         }
 
         a:hover {
             color: var(--color-primary-dark);
+            fill: var(--color-primary-dark);
         }
     }
 }

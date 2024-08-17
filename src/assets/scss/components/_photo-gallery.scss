@@ -1,5 +1,6 @@
 .photo-gallery {
     position: relative;
+    background-color: var(--color-primary);
 
     .image-carousel {
         display: flex;
@@ -13,17 +14,19 @@
             max-width: 1000px;
             margin: 0 auto;
             gap: 1.5rem;
-            padding: 1.5rem 0;
+            padding: 5rem 0;
             justify-content: center;
             flex-wrap: wrap;
         }
     }
 
     .image-wrapper {
+        position: relative;
         width: 100vw;
         height: 100vh;
         aspect-ratio: 1 / 1.5;
         scroll-snap-align: center;
+
         @media (min-width: 1000px) {
             width: 31%;
             height: auto;

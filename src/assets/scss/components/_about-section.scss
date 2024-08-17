@@ -1,13 +1,9 @@
 .about-section {
-    padding: 2.5rem 0;
+    padding: 5rem 1.5rem;
     background-color: var(--color-off-white);
 
-    .container {
-        margin: 0 auto;
-        padding: 1.5rem;
-        max-width: 1000px;
-        display: flex;
-        flex-direction: column;
+    @media (min-width: 1000px) {
+        padding: 5rem 1.5rem;
     }
 
     .read-more-button {
@@ -16,6 +12,12 @@
         color: var(--color-primary);
         font-size: 1.1rem;
         align-self: flex-end;
+        transition: color 0.3s;
+
+        &:hover {
+            cursor: pointer;
+            color: var(--color-primary-dark);
+        }
     }
 
     .hidden {
