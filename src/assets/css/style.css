@@ -250,12 +250,6 @@ body {
   }
 }
 
-main {
-  scroll-snap-type: y;
-  height: 100vh;
-  overflow-y: scroll;
-}
-
 .menu-button {
   cursor: pointer;
   position: relative;
